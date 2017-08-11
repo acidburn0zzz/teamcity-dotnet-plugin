@@ -8,6 +8,15 @@ teamcity {
         descriptor = project.file('teamcity-plugin.xml')
         tokens = [Plugin_Version: project.version]
     }
+    environments {
+        downloadsDir = project.downloadsDir
+        baseHomeDir = project.serversDir
+
+        teamcity_2017_1 {
+            version = '2017.1-SNAPSHOT'
+            downloadUrl = 'https://download.jetbrains.com/teamcity/eap/TeamCity-45965.tar.gz'
+        }
+    }
 }
 
 dependencies {
